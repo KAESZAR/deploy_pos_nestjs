@@ -2,7 +2,7 @@
 
 A full-stack Point of Sale (POS) application built with modern technologies.
 
-![Sistema POS](./public/img/Sis.Pos.png)
+![POS System Demo](./docs/sis.pos.png)
 
 ## 🏗️ Tech Stack
 
