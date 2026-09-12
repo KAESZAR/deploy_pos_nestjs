@@ -9,9 +9,9 @@ export const typeOrmConfig = (configService: ConfigService) : TypeOrmModuleOptio
     username: configService.get('DATABASE_USER'),
     password: configService.get('DATABASE_PASS'),
     database: configService.get('DATABASE_NAME'),
-    ssl: {
-        rejectUnauthorized: false,
-    },
+    ssl: configService.get('DATABASE_HOST') !== '127.0.0.1'
+        ? { rejectUnauthorized: false }
+        : false,
     logging: true,
     entities: [join(__dirname + '../../**/*.entity.{js,ts}')],
     synchronize: configService.get('NODE_ENV') !== 'production',
