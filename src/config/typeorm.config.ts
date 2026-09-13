@@ -14,7 +14,7 @@ export const typeOrmConfig = (configService: ConfigService) : TypeOrmModuleOptio
         : false,
     logging: true,
     entities: [join(__dirname + '../../**/*.entity.{js,ts}')],
-    synchronize: configService.get('NODE_ENV') !== 'production',
+    synchronize: true,
     extra: {
         connectionTimeoutMillis: 30000,
     },
